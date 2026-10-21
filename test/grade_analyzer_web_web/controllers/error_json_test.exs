@@ -2,7 +2,9 @@ defmodule GradeAnalyzerWebWeb.ErrorJSONTest do
   use GradeAnalyzerWebWeb.ConnCase, async: true
 
   test "renders 404" do
-    assert GradeAnalyzerWebWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
+    assert GradeAnalyzerWebWeb.ErrorJSON.render("404.json", %{}) == %{
+             errors: %{detail: "Not Found"}
+           }
   end
 
   test "renders 500" do

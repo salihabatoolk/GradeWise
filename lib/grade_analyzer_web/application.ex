@@ -10,7 +10,8 @@ defmodule GradeAnalyzerWeb.Application do
     children = [
       GradeAnalyzerWebWeb.Telemetry,
       GradeAnalyzerWeb.Repo,
-      {DNSCluster, query: Application.get_env(:grade_analyzer_web, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:grade_analyzer_web, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: GradeAnalyzerWeb.PubSub},
       # Start a worker by calling: GradeAnalyzerWeb.Worker.start_link(arg)
       # {GradeAnalyzerWeb.Worker, arg},
